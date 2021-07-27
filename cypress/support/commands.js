@@ -68,7 +68,7 @@ Cypress.Commands.add('getCompanyUrlAtIndex', (sectionData, sectionName, siteUrl,
 })
 
 /**
- * Given a section's URL, use the function getCompanyDataAtIndex to get first, third and last company's URL on a section, and
+ * Given a section's URL, use the function getCompanyUrlAtIndex to get first, third and last company's URL on a section, and
  * add these URLs to a specified object.
  * @param {object} sectionData - The object from which we find the specified section's url; to which we add company URLs
  * @param {string} sectionName - The name of the section we want to search for company URLs
