@@ -12,6 +12,7 @@ will significantly impact the performance of the test. With the logs closed, the
 the test will run for over 7 minutes.
 
 In headless mode:
+
 In a terminal window, navigate to this repository and run the command ```npx cypress run cypress/integration/company.info.spec.js```.
 
 
