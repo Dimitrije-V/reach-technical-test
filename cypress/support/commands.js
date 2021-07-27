@@ -1,4 +1,14 @@
 require('cypress-downloadfile/lib/downloadFileCommand')
+
+/**
+ * Accepts cookie tracking when the banner appears. Not actually needed for the test to run, but will help with visibility
+ * in the logs.
+ */
+Cypress.Commands.add('acceptCookies', () => {
+    cy.get('#onetrust-accept-btn-handler')
+    .click()
+})
+
 /**
  * Generate data structure containing names of each section, their URL, and an empty "content" object.
  * @property {object} sectionList - The JSON object to which we write the above information.
