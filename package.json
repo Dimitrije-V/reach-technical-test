@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Dimitrije-V/reach-technical-test#readme",
   "devDependencies": {
     "cypress": "^8.0.0"
+  },
+  "dependencies": {
+    "cypress-downloadfile": "^1.2.1"
   }
 }

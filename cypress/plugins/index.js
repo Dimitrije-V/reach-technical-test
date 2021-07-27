@@ -20,3 +20,10 @@ module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
 }
+/**
+ * @type {Cypress.PluginConfig}
+ */
+const { downloadFile } = require('cypress-downloadfile/lib/addPlugin')
+module.exports = (on, config) => {
+  on('task', { downloadFile })
+}
