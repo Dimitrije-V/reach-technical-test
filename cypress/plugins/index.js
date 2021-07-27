@@ -21,6 +21,7 @@ module.exports = (on, config) => {
   // `config` is the resolved Cypress config
 }
 /**
+ * Adds downloadFile command.
  * @type {Cypress.PluginConfig}
  */
 const { downloadFile } = require('cypress-downloadfile/lib/addPlugin')
