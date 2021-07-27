@@ -1,7 +1,7 @@
 require('cypress-downloadfile/lib/downloadFileCommand')
 
 /**
- * Accepts cookie tracking when the banner appears. Not actually needed for the test to run, but will help with visibility
+ * Accepts cookies when the banner appears. Not actually needed for the test to run, but will help with visibility
  * in the logs.
  */
 Cypress.Commands.add('acceptCookies', () => {
@@ -33,7 +33,7 @@ Cypress.Commands.add('getSectionData', (sectionList, siteUrl) => {
 })
 
 /**
- * Get the URL of company on a section, based on a specified position/index. Add this URL to the specified JSON object. 
+ * Get the URL of a company on a section, based on a specified position/index. Add this URL to the specified JSON object. 
  * This function will be used to get the first, third, and last company's details, presenting us with an issue.
  * Namely, the problem here is that a section may have less than 3 elements, causing the check for the third to fail. 
  * Cypress is built around avoiding flaky tests, and as such does not support conditional testing, so we need to first check
@@ -68,7 +68,7 @@ Cypress.Commands.add('getCompanyUrlAtIndex', (sectionData, sectionName, siteUrl,
 })
 
 /**
- * Given a section's URL, use the function getCompanyUrlAtIndex to get first, third and last company's URL on a section, and
+ * Given a section's URL, use the function getCompanyUrlAtIndex to get the first, third and last company's URL on a section, and
  * add these URLs to a specified object.
  * @param {object} sectionData - The object from which we find the specified section's url; to which we add company URLs
  * @param {string} sectionName - The name of the section we want to search for company URLs
@@ -92,7 +92,7 @@ Cypress.Commands.add('getFirstThirdAndLastCompanyData', (sectionData, sectionNam
  * We use .replace() to remove complex whitespace characters "\t" and "\n" from data before assigning it to a JSON, as some
  * elements are nested in more tags than others, and as such will look like "\t\t\t\t\nData\t\t\t\t" instead of just
  * "Data" when we call .invoke('text).
- * @param {string} companyUrl - The URL from which to retrieve copany data
+ * @param {string} companyUrl - The URL from which to retrieve company data
  * @param {object} companyData - The JSON object to which we add company data
  * @param {string} siteUrl - The URL of the site we're testing, used to construct a full URL for the company logo
  * @param {string} companyName - The name of the company the data of which we're capturing
