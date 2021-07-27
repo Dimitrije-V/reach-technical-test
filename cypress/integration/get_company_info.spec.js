@@ -2,7 +2,7 @@ const siteUrl = 'https://www.medicines.org.uk'
 let sectionData = {}
 let companyList = {}
 
-describe("Write all specified company info to JSON file, and download company logo images", () => {
+describe('Write all specified company info to JSON file, and download company logo images', () => {
     
     /**
      * Initially, navigate to the company browser, and save the name and URL of each section to a JSON object,
@@ -25,10 +25,10 @@ describe("Write all specified company info to JSON file, and download company lo
 
     /**
      * Given a JSON object containing the name and URL of some companies, navigate to each company, and add their names,
-     * contact information, and the URL of their logo to a new JSON object. Then write that JSON object to a file under the
+     * contact information and the URL of their logo to a new JSON object. Then write that JSON object to a file under the
      * fixtures folder.
      */
-    it("Get company data and write to JSON file", () => {
+    it('Get company data and write to JSON file', () => {
         let companyData = {}
         cy.visit(siteUrl)
         cy.acceptCookies()
@@ -52,7 +52,7 @@ describe("Write all specified company info to JSON file, and download company lo
      * We remove "/" symbols in company names, as a company called "A / B" would otherwise produce a file B.jpg in a folder
      * called A, instead of a file A/B.jpg
     */
-    it("Get company logo images and save to /cypress/Downloads folder", () => {
+    it('Get company logo images and save to /cypress/Downloads folder', () => {
         for (let company in companyList) {
             let logoUrl = companyList[company].Logo
             let fileName = `${company}.jpg`.replace('/', '')
