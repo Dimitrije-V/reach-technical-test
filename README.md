@@ -18,5 +18,5 @@ In a terminal window, navigate to this repository and run the command ```npx cyp
 
 
 # Viewing the results
-After the test has run, you can find the downloaded company logos under the folder /cypress/Downloads, and the JSON file containing company data can be 
+After the test has run, you can find the downloaded company logos under the folder ```/cypress/Downloads```, and the JSON file containing company data can be 
 found at ```/cypress/fixtures/companyData.json```.
